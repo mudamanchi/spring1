@@ -1,6 +1,6 @@
 pipeline{  
     environment {
-    registry = "<<Your_Docker_Hub_Account/spring-demo>>"
+    registry = "hfirdhows/myrepo"
     }
   agent any
   stages {
@@ -16,7 +16,7 @@ pipeline{
       
        stage('Publish') {
            environment {
-               registryCredential = 'dockerhub'
+               registryCredential = 'docker-login'
            }
            steps{
               
