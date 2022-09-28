@@ -1,6 +1,6 @@
 pipeline{  
     environment {
-    registry = "sakthipriya95/capstone"
+    registry = "mudamanchi/spring"
     }
   agent any
   stages {
@@ -16,7 +16,7 @@ pipeline{
       
        stage('Publish') {
            environment {
-               registryCredential = 'docker-login'
+               registryCredential = 'docker'
            }
            steps{
               
